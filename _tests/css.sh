@@ -8,7 +8,7 @@ npm install csscomb
 
 ./node_modules/.bin/csscomb styles/*.css
 
-if ! git diff styles/ --quiet; then
+if ! git diff --quiet styles/; then
     git diff styles/
     echo "CSS linting detected an error. Please use csscomb and resubmit"
     exit 1;
