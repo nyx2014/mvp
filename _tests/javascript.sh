@@ -6,4 +6,4 @@ set -e
 
 npm install standard
 
-./node_modules/.bin/standard scripts/**/*.js
+./node_modules/.bin/standard --env jquery scripts/**/*.js
