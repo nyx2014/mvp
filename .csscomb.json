@@ -8,6 +8,7 @@
     "eof-newline": true,
     "leading-zero": true,
     "quotes": "double",
+    "sort-order": [["a-fake-css-property"]],
     "sort-order-fallback": "abc",
     "space-before-colon": "",
     "space-after-colon": " ",
