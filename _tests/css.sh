@@ -4,7 +4,6 @@
 
 set -e
 
-nvm install node
 npm install csscomb
 
 ./node_modules/.bin/csscomb styles/*.css

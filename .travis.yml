@@ -3,8 +3,8 @@ php:
     - "7.0"
 
 before_script:
-    - "sh ./_tests/css.sh"
-    - "sh ./_tests/javascript.sh"
+    - "bash -c 'source ~/.nvm/nvm.sh; nvm install node; sh ./_tests/css.sh'"
+    - "bash -c 'source ~/.nvm/nvm.sh; nvm install node; sh ./_tests/javascript.sh'"
     - "sh ./_tests/php.sh"
     - "php ./_tests/translations.php"
 

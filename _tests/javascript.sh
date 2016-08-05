@@ -4,7 +4,6 @@
 
 set -e
 
-nvm install node
 npm install standard
 
 ./node_modules/.bin/standard scripts/**/*.js
