@@ -1,23 +1,23 @@
-/***************************************
-* Copyright 2016 elementary LLC.       *
-* This file is part of elementaryos.io *
-***************************************/
+/*************************************
+* Copyright 2016 elementary LLC.     *
+* This file is part of elementary.io *
+*************************************/
 
 h1 {
     clear: both;
 }
 
 a.column {
-    color: inherit;
     transition: color 250ms ease-in-out;
+    color: inherit;
 }
 
 a.column:hover,
 a.column:focus,
 a.column:active {
+    text-decoration: none;
     color: #08c;
     fill: #08c;
-    text-decoration: none;
 }
 
 a.column h3 {
@@ -29,30 +29,30 @@ a.column h3 {
 ***********/
 
 .row.apps {
-    padding-bottom: 0;
     padding-top: 12px;
+    padding-bottom: 0;
     text-align: center;
 }
 
 .row.apps .app {
-    border: 1px solid transparent;
-    border-radius: 4px;
-    color: inherit;
     display: inline-block;
+    width: 100%;
     margin: 12px 0;
     padding: 12px;
-    text-align: left;
     transition: border-color 150ms ease-in-out;
+    text-align: left;
     vertical-align: top;
-    width: 100%;
     word-wrap: break-word;
+    color: inherit;
+    border: 1px solid transparent;
+    border-radius: 4px;
 }
 
 .row.apps .app:hover,
 .row.apps .app:focus,
 .row.apps .app:active {
-    border: 1px solid rgba(0, 0, 0, 0.25);
     text-decoration: none;
+    border: 1px solid rgba(0, 0, 0, 0.25);
 }
 
 .row.apps .app img,
@@ -65,10 +65,9 @@ a.column h3 {
 }
 
 @media (min-width: 600px) {
-
     .row.apps .app {
-        text-align: center;
         width: 192px;
+        text-align: center;
     }
 
     .row.apps .app img,
@@ -77,11 +76,10 @@ a.column h3 {
     }
 
     .row.apps .app img {
-        margin-left: auto;
         margin-right: auto;
+        margin-left: auto;
         vertical-align: middle;
     }
-
 }
 
 .row.apps .app span {

@@ -1,12 +1,12 @@
-/***************************************
-* Copyright 2016 elementary LLC.       *
-* This file is part of elementary.io   *
-***************************************/
+/*************************************
+* Copyright 2016 elementary LLC.     *
+* This file is part of elementary.io *
+*************************************/
 
 .member {
     float: left;
-    height: 150px;
     width: 33%;
+    height: 150px;
     margin: 8px auto;
 }
 
@@ -23,24 +23,23 @@
 ***************/
 
 .member_photo {
+    display: inline-block;
+    float: left;
     width: 96px;
     height: 96px;
-    background-size: 96px 96px;
-    background-position: top left;
-    background-repeat: no-repeat;
     margin-right: 20px;
-    float: left;
-    display: inline-block;
-    border-radius: 50%;
-    border: none;
-    box-shadow: inset 0 0 0 1px rgba(0,0,0, 0.35),
-                inset 0 0 0 2px rgba(255,255,255, 0.10),
-                inset 0 2px 0 0 rgba(255,255,255, 0.45),
-                inset 0 -2px 0 0 rgba(255,255,255, 0.15),
-                0 1px 3px 0 rgba(0,0,0,0.12),
-                0 1px 2px 0 rgba(0,0,0,0.24);
-
     transition: all 100ms ease-in;
+    border: none;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 96px 96px;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0, 0.35),
+    inset 0 0 0 2px rgba(255,255,255, 0.10),
+    inset 0 2px 0 0 rgba(255,255,255, 0.45),
+    inset 0 -2px 0 0 rgba(255,255,255, 0.15),
+    0 1px 3px 0 rgba(0,0,0,0.12),
+    0 1px 2px 0 rgba(0,0,0,0.24);
 }
 
 h5.member_name {
@@ -56,9 +55,9 @@ h5.member_name {
 
 .member_title {
     font-size: 90%;
+    display: block;
     margin: 4px 0;
     padding-right: 20px;
-    display: block;
     text-align: left;
     text-transform: capitalize;
 }
@@ -71,28 +70,27 @@ h5.member_name {
 }
 
 @media only screen and (max-width:1000px) {
-
     .member {
         height: 256px;
     }
 
     .member_photo {
-        margin: 0;
         float: none;
         width: 144px;
         height: 144px;
+        margin: 0;
         background-size: 144px 144px;
     }
 
     h5.member_name {
-        margin-top:8px;
         font-size: 90%;
+        margin-top: 8px;
         text-align: center;
     }
 
     .member_title {
-        padding: 0;
         font-size: 80%;
+        padding: 0;
         text-align: center;
     }
 
@@ -102,7 +100,6 @@ h5.member_name {
 }
 
 @media only screen and (max-width:840px) {
-
     .member_photo {
         float: none;
         width: 120px;
@@ -111,13 +108,12 @@ h5.member_name {
     }
 
     .member {
-        height: 200px;
         width: 33%;
+        height: 200px;
     }
 }
 
 @media only screen and (max-width:700px) {
-
     .member_photo {
         float: none;
         width: 96px;
@@ -126,7 +122,7 @@ h5.member_name {
     }
 
     .member {
-        height: 200px;
         width: 50%;
+        height: 200px;
     }
 }

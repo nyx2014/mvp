@@ -1,12 +1,12 @@
-/***************************************
-* Copyright 2016 elementary LLC.       *
+/*************************************
+* Copyright 2016 elementary LLC.     *
 * This file is part of elementary.io *
-***************************************/
+*************************************/
 
 html,
 body {
-    background-color: #3e4e54;
     color: #c8d0d0;
+    background-color: #3e4e54;
     fill: #c8d0d0;
 }
 
@@ -37,8 +37,8 @@ section:nth-child(even) {
 *********/
 
 .button.flat {
-    border-color: rgba(200, 208, 208, 0.5);
     color: #c8d0d0;
+    border-color: rgba(200, 208, 208, 0.5);
 }
 
 .button.flat:focus {
@@ -46,26 +46,26 @@ section:nth-child(even) {
 }
 
 .button.flat.suggested-action {
-    background-color: #268bd2;
-    border-color: #268bd2;
     color: #fff;
+    border-color: #268bd2;
+    background-color: #268bd2;
 }
 
 .button.flat.suggested-action:focus {
-    background-color: #40a5ec;
     border-color: #40a5ec;
+    background-color: #40a5ec;
 }
 
 /* Funding */
 
 #funding .button.flat.suggested-action {
-    background-color: #edac35;
     border-color: #edac35;
+    background-color: #edac35;
 }
 
 #funding .button.flat.suggested-action:focus {
-    background-color: #ffc357;
     border-color: #ffc357;
+    background-color: #ffc357;
 }
 
 #paypalform {
@@ -75,69 +75,67 @@ section:nth-child(even) {
 /* Translations */
 
 #translations .button.flat.suggested-action {
-    background-color: #2aa198;
     border-color: #2aa198;
+    background-color: #2aa198;
 }
 
 #translations .button.flat.suggested-action:focus {
-    background-color: #44bbb2;
     border-color: #44bbb2;
+    background-color: #44bbb2;
 }
 
 /* Support */
 
 #support .button.flat.suggested-action {
-    background-color: #d53c12;
     border-color: #d53c12;
+    background-color: #d53c12;
 }
 
 #support .button.flat.suggested-action:focus {
-    background-color: #ef562c;
     border-color: #ef562c;
+    background-color: #ef562c;
 }
 
 /* Web */
 
 #web-development .button.flat.suggested-action {
-    background-color: #d33682;
     border-color: #d33682;
+    background-color: #d33682;
 }
 
 #web-development .button.flat.suggested-action:focus {
-    background-color: #ed509c;
     border-color: #ed509c;
+    background-color: #ed509c;
 }
 
 /* Design */
 
 #design .button.flat.suggested-action {
     color: #3e4e54;
-    background-color: rgba(200, 208, 208, 0.8);
     border-color: transparent;
+    background-color: rgba(200, 208, 208, 0.8);
 }
 
 #design .button.flat.suggested-action:focus {
-    background-color: #fff;
     border-color: #fff;
+    background-color: #fff;
 }
 
 @media (max-width: 1080px) {
-
     .button.flat {
-        margin-left: auto;
         margin-right: auto;
+        margin-left: auto;
     }
-
 }
 
 .actions {
-    margin-bottom: 50px;
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .charts .barchart-ctn {
-    max-width: 100%;
     width: 780px;
+    max-width: 100%;
 }
 
 .charts .barchart-ctn,
@@ -151,10 +149,10 @@ section:nth-child(even) {
 }
 
 .charts .doughnuts-ctn .doughnut {
-    height: 90px;
-    margin: 15px auto;
     position: relative;
     width: 90px;
+    height: 90px;
+    margin: 15px auto;
 }
 
 .charts .doughnuts-ctn .doughnut canvas {
@@ -164,21 +162,20 @@ section:nth-child(even) {
 
 .doughnut .doughnut-label {
     font-size: 12px;
-    left: 0;
-    padding: 11px 0;
     position: absolute;
-    text-align: center;
     top: 0;
+    left: 0;
     width: 100%;
+    padding: 11px 0;
+    text-align: center;
 }
 
 .doughnut .doughnut-count {
-    color: #93a1a1;
     font-size: 28px;
+    color: #93a1a1;
 }
 
 @media (max-width: 985px) {
-
     .charts .doughnuts-ctn {
         margin-left: 0;
     }
@@ -187,20 +184,17 @@ section:nth-child(even) {
         display: inline-block;
         margin: 4px;
     }
-
 }
 
 @media (max-width: 360px) {
-
     .charts .doughnuts-ctn .doughnut {
-        height: 70px;
         width: 70px;
+        height: 70px;
     }
 
     .charts .doughnuts-ctn .doughnut .doughnut-label {
         padding: 4px 0;
     }
-
 }
 
 .doughnut.fixed .doughnut-count {
@@ -220,12 +214,12 @@ section:nth-child(even) {
 }
 
 #sections-menu .button.flat {
-    border: 2px solid #c8d0d0;
-    border-radius: 4px;
-    color: #c8d0d0;
     display: inline-block;
     min-width: 167px;
     vertical-align: middle;
+    color: #c8d0d0;
+    border: 2px solid #c8d0d0;
+    border-radius: 4px;
 }
 
 #sections-menu .button.flat:nth-child(1) {
@@ -257,29 +251,29 @@ section:nth-child(even) {
 }
 
 .web-browser {
-    border: 2px solid rgba(200, 208, 208, 0.5);
-    border-radius: 4px;
+    position: relative;
     box-sizing: border-box;
+    width: 888px;
+    max-width: 100%;
     height: auto;
     margin: 24px auto;
-    max-width: 100%;
     padding: 146px 190px 100px;
-    position: relative;
     text-align: center;
-    width: 888px;
+    border: 2px solid rgba(200, 208, 208, 0.5);
+    border-radius: 4px;
 }
 
 .web-browser #toolbar {
-    border-bottom: 2px solid rgba(200, 208, 208, 0.5);
-    padding: 12px;
-    padding-top: 9px;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    -moz-user-select: none;
-    -ms-user-select: none;
+    padding: 12px;
+    padding-top: 9px;
     -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+    border-bottom: 2px solid rgba(200, 208, 208, 0.5);
 }
 
 .web-browser #toolbar img {
@@ -288,13 +282,13 @@ section:nth-child(even) {
 }
 
 .web-browser #toolbar #search-bar {
-    background-color: rgba(200, 208, 208, 0.3);
-    border-radius: 2px;
     display: inline-block;
+    width: calc(100% - 124px);
     height: 20px;
     margin: 0 12px;
-    width: calc(100% - 124px);
     vertical-align: middle;
+    border-radius: 2px;
+    background-color: rgba(200, 208, 208, 0.3);
 }
 
 .web-browser .actions {
@@ -306,19 +300,17 @@ section:nth-child(even) {
 }
 
 @media (max-width: 888px) {
-
     .web-browser {
+        width: 96%;
         height: auto;
         margin: 24px 2%;
         padding: 110px 130px 40px 130px;
-        width: 96%;
     }
 
     .web-browser > .actions {
-        margin-bottom: 30px;
         margin-top: 30px;
+        margin-bottom: 30px;
     }
-
 }
 
 @media (max-width: 600px) {
