@@ -1,0 +1,11 @@
+language: php
+php:
+    - "7.0"
+
+before_script:
+    - "./_tests/css.sh"
+    - "./_tests/javascript.sh"
+    - "./_tests/php.sh"
+    - "php ./_tests/translations.php"
+
+script: echo "Passing"
