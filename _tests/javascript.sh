@@ -15,5 +15,3 @@ npm install standard
 echo "############################"
 echo "Javascript linting complete!"
 echo "############################"
-
-exit 0;
