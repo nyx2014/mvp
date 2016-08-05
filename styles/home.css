@@ -14,29 +14,23 @@
 }
 
 @media all and (min-width: 530px) {
-
     .page-index .hero {
         background-image: url("../images/responsive-images/notebook-medium.png");
         height: auto;
         padding-top: 35%;
     }
-
 }
 
 @media all and (min-width: 1000px) {
-
     .page-index .hero {
         background-image: url("../images/responsive-images/notebook-large.png");
     }
-
 }
 
 @media all and (min-width: 1300px) {
-
     .page-index .hero {
         background-image: url("../images/notebook.png");
     }
-
 }
 
 .payment-button:before {
@@ -112,8 +106,8 @@ input:focus + .focus-reveal {
 
 #carousel-choices .button {
     line-height: 16px;
-    padding: 8px 16px;
     min-width: initial;
+    padding: 8px 16px;
 }
 
 #carousel-choices svg {
@@ -152,20 +146,17 @@ input:focus + .focus-reveal {
 }
 
 @media (max-width: 404px) {
-
     #carousel {
         background-image: url("../images/screenshots/background_mobile_small.jpg");
         background-size: cover;
     }
 
     #carousel .slide > .row > .column:nth-child(2) {
-      margin-top: -48px;
+        margin-top: -48px;
     }
-
 }
 
 @media (min-width: 434px) {
-
     #carousel {
         background-image: url("../images/screenshots/background_mobile_large.jpg");
         background-size: cover;
@@ -183,11 +174,9 @@ input:focus + .focus-reveal {
     #carousel-choices svg {
         display: none;
     }
-
 }
 
 @media (min-width: 1024px) {
-
     #carousel {
         background-image: url("../images/screenshots/background_wide_small.jpg");
         background-size: cover;
@@ -196,7 +185,6 @@ input:focus + .focus-reveal {
 }
 
 @media (min-width: 1350px) {
-
     #carousel {
         background-image: url("../images/screenshots/background_wide_large.jpg");
         background-size: cover;
@@ -205,24 +193,22 @@ input:focus + .focus-reveal {
 
     #carousel .slide > .row {
         margin: 0 calc(50% - 700px);
-        padding-top: 28px;
         padding-bottom: 68px;
+        padding-top: 28px;
     }
 
     #carousel .slide > .row > .column:nth-child(2) {
-        margin-top: 33px;
-        margin-right: 0;
         display: inline-block;
+        margin-right: 0;
+        margin-top: 33px;
     }
 
     #carousel .slide > .row > .column .column:nth-child(2) {
         max-width: 236px;
     }
-
 }
 
 @media (min-width: 1400px) {
-
     #carousel .slide > .row {
         padding: 48px 24px;
     }
@@ -234,7 +220,6 @@ input:focus + .focus-reveal {
     #carousel .slide > .row > .column .column:nth-child(2) {
         max-width: 256px;
     }
-
 }
 
 .vertical-top {
@@ -261,11 +246,9 @@ input:focus + .focus-reveal {
 }
 
 @media (min-width: 330px) {
-
     #slingshot .column:nth-child(2) h2 {
         margin-left: 24px;
     }
-
 }
 
 .symbolic {
@@ -278,7 +261,7 @@ input:focus + .focus-reveal {
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
-                0 3px 6px rgba(0, 0, 0, 0.23);
+    0 3px 6px rgba(0, 0, 0, 0.23);
     display: inline-block;
     height: 512px;
     margin-right: 24px;
@@ -318,7 +301,7 @@ input:focus + .focus-reveal {
     border: 1px solid rgba(61, 155, 218, 0.8);
     border-radius: 2.5px;
     box-shadow: inset 0 0 0 1px rgba(61, 155, 218, 0.23),
-                0 1px 0 0 rgba(255, 255, 255, 0.3);
+    0 1px 0 0 rgba(255, 255, 255, 0.3);
     color: #333;
     display: inline-block;
     fill: #a6a6a6;
@@ -415,9 +398,9 @@ input:focus + .focus-reveal {
 .slingshot-category.active {
     background-image: linear-gradient(to bottom, #dbdbdb, #e3e3e3);
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.02),
-                inset 0 1px 0 0 rgba(0, 0, 0, 0.05),
-                inset 0 2px 0 0 rgba(0, 0, 0, 0.05),
-                inset 0 -1px 0 0 rgba(0, 0, 0, 0.05);
+    inset 0 1px 0 0 rgba(0, 0, 0, 0.05),
+    inset 0 2px 0 0 rgba(0, 0, 0, 0.05),
+    inset 0 -1px 0 0 rgba(0, 0, 0, 0.05);
     color: #717171;
 }
 
@@ -484,8 +467,8 @@ span.search-term {
     margin-right: -8px;
     overflow: hidden;
     transition: all 1.5s steps(3, start);
-    width: 19px;
     vertical-align: top;
+    width: 19px;
 }
 
 span.search-term.inactive {
@@ -495,26 +478,22 @@ span.search-term.inactive {
 
 span.cursor {
     -webkit-animation: blink 1.2s steps(5, start) infinite;
-    animation: blink 1.2s steps(5, start) infinite;
+            animation: blink 1.2s steps(5, start) infinite;
     font-size: 12pt;
     line-height: 18px;
     top: -4px;
 }
 
 @-webkit-keyframes blink {
-
     to {
         visibility: hidden;
     }
-
 }
 
 @keyframes blink {
-
     to {
         visibility: hidden;
     }
-
 }
 
 span.results-title {
@@ -593,7 +572,6 @@ span.results-title {
 
 
 @media (max-width: 1400px) {
-
     .slingshot {
         height: 369px;
         width: 424px;
@@ -609,7 +587,7 @@ span.results-title {
     }
 
     .slingshot-arrow {
-          top: -346px;
+        top: -346px;
     }
 
     .slingshot-categories-sidebar {
@@ -619,11 +597,9 @@ span.results-title {
     #slingshot-categories {
         margin-top: -312px;
     }
-
 }
 
 @media (max-width: 581px) {
-
     .slingshot {
         height: 269px;
         width: 272px;
@@ -651,5 +627,4 @@ span.results-title {
     #slingshot h2 {
         margin-top: 24px;
     }
-
 }

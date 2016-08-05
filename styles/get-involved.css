@@ -111,9 +111,9 @@ section:nth-child(even) {
 /* Design */
 
 #design .button.flat.suggested-action {
-    color: #3e4e54;
     background-color: rgba(200, 208, 208, 0.8);
     border-color: transparent;
+    color: #3e4e54;
 }
 
 #design .button.flat.suggested-action:focus {
@@ -122,12 +122,10 @@ section:nth-child(even) {
 }
 
 @media (max-width: 1080px) {
-
     .button.flat {
         margin-left: auto;
         margin-right: auto;
     }
-
 }
 
 .actions {
@@ -178,7 +176,6 @@ section:nth-child(even) {
 }
 
 @media (max-width: 985px) {
-
     .charts .doughnuts-ctn {
         margin-left: 0;
     }
@@ -187,11 +184,9 @@ section:nth-child(even) {
         display: inline-block;
         margin: 4px;
     }
-
 }
 
 @media (max-width: 360px) {
-
     .charts .doughnuts-ctn .doughnut {
         height: 70px;
         width: 70px;
@@ -200,7 +195,6 @@ section:nth-child(even) {
     .charts .doughnuts-ctn .doughnut .doughnut-label {
         padding: 4px 0;
     }
-
 }
 
 .doughnut.fixed .doughnut-count {
@@ -271,15 +265,15 @@ section:nth-child(even) {
 
 .web-browser #toolbar {
     border-bottom: 2px solid rgba(200, 208, 208, 0.5);
+    left: 0;
     padding: 12px;
     padding-top: 9px;
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    -moz-user-select: none;
-    -ms-user-select: none;
     -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+    width: 100%;
 }
 
 .web-browser #toolbar img {
@@ -293,8 +287,8 @@ section:nth-child(even) {
     display: inline-block;
     height: 20px;
     margin: 0 12px;
-    width: calc(100% - 124px);
     vertical-align: middle;
+    width: calc(100% - 124px);
 }
 
 .web-browser .actions {
@@ -306,7 +300,6 @@ section:nth-child(even) {
 }
 
 @media (max-width: 888px) {
-
     .web-browser {
         height: auto;
         margin: 24px 2%;
@@ -318,7 +311,6 @@ section:nth-child(even) {
         margin-bottom: 30px;
         margin-top: 30px;
     }
-
 }
 
 @media (max-width: 600px) {
