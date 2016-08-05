@@ -3,51 +3,50 @@
 $(function () {
   var paymentMinimum = 100 // Let's make the minimum $1.00 for now
 
-  var previousAmount = 'amount-ten'
+  var previousButton = 'amount-ten'
   var currentAmount = 'amount-ten'
-  var amountClick = function () {
-    // Remove existing checks.
-    $('.target-amount').removeClass('checked')
-    // Add current check.
-    $(this).addClass('checked')
-    // Declare new amount.
-    var newAmount = this.id
-    // If different, update the previous and current.
-    if (newAmount !== currentAmount) {
-      previousAmount = currentAmount
-      currentAmount = newAmount
-    }
-  }
 
-  var amountBlur = function () {
-    // If NOT valid OR empty.
-    if (!this.validity.valid || this.value === '') {
-      // Remove existing checks.
+  var amountHandler = function (e) {
+    var targetId = $(e.target).attr('id') // avoids null values vs native js
+    var targetType = e.type
+
+    // Verify the number
+    if (!$(e.target).hasClass('target-amount') && currentAmount === 'amount-custom') {
+      var i = document.getElementById('amount-custom')
+
+      // all the things for a 'bad input'
+      if (!i.validity.valid || i.value === '') {
+        targetId = previousButton
+        targetType = 'click'
+      }
+    }
+
+    // on button / input becoming active. Focus of custom amount with valid input considered becoming active
+    if ((targetId === 'amount-custom' || targetType !== 'focusin') && $('#' + targetId).hasClass('target-amount')) {
+      if (targetId !== 'amount-custom') previousButton = targetId
+
       $('.target-amount').removeClass('checked')
-      // Use the old amount.
-      currentAmount = previousAmount
-      // Set the old amount as checked.
-      $('#' + currentAmount).addClass('checked')
+      $('#' + targetId).addClass('checked')
+      currentAmount = targetId
 
       updateDownloadButton()
     }
   }
+
+  // Capture all inputs so we can dictate what download amount is in use
+  $(document).on('click focusin', amountHandler)
 
   var amountValidate = function (event) {
     var currentVal = $('#amount-custom').val()
     var code = event.which || event.keyCode || event.charCode
 
     if ((code !== 46 || currentVal.indexOf('.') !== -1) &&
-         [8, 37, 39].indexOf(code) === -1 &&
+        [8, 37, 39].indexOf(code) === -1 &&
         (code < 48 || code > 57)) {
       event.preventDefault()
     }
   }
 
-  // Listen for Clicking on Amounts
-  $('.target-amount').click(amountClick)
-  // Check Custom Amounts on Blur
-  $('#amount-custom').blur(amountBlur)
   // Don't allow non-digit input
   $('#amount-custom').keypress(amountValidate)
 
@@ -113,7 +112,6 @@ $(function () {
 
     if ($amountTen.val() !== 0) {
       $('#amounts').html('<input type="hidden" id="amount-ten" value="0">')
-      $amountTen.each(amountClick)
       updateDownloadButton()
     }
 
@@ -121,13 +119,14 @@ $(function () {
     paymentHttp.open('POST', './backend/payment.php', true)
     paymentHttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
     paymentHttp.send('description=' + encodeURIComponent(releaseTitle + ' ' + releaseVersion) +
-                          '&amount=' + amount +
-                          '&token=' + token.id +
-                          '&email=' + encodeURIComponent(token.email))
+                     '&amount=' + amount +
+                     '&token=' + token.id +
+                     '&email=' + encodeURIComponent(token.email))
   }
 
   function openDownloadOverlay () {
     var $openModal = $('.open-modal')
+
     console.log('Open the download overlay!')
 
     $openModal.leanModal({
@@ -145,18 +144,23 @@ $(function () {
     if (ua.indexOf('Android') >= 0) {
       return 'Android'
     }
+
     if (ua.indexOf('Mac OS X') >= 0 && ua.indexOf('Mobile') >= 0) {
       return 'iOS'
     }
+
     if (ua.indexOf('Windows') >= 0) {
       return 'Windows'
     }
+
     if (ua.indexOf('Mac_PowerPC') >= 0 || ua.indexOf('Macintosh') >= 0) {
       return 'OS X'
     }
+
     if (ua.indexOf('Linux') >= 0) {
       return 'Linux'
     }
+
     return 'Other'
   }
 
@@ -164,10 +168,10 @@ $(function () {
     var downloadLinks = $('#download-modal').find('.actions').find('a')
 
     var linksData = [
-            { arch: '32-bit', method: 'HTTP' },
-            { arch: '32-bit', method: 'Magnet' },
-            { arch: '64-bit', method: 'HTTP' },
-            { arch: '64-bit', method: 'Magnet' }
+        { arch: '32-bit', method: 'HTTP' },
+        { arch: '32-bit', method: 'Magnet' },
+        { arch: '64-bit', method: 'HTTP' },
+        { arch: '64-bit', method: 'Magnet' }
     ]
 
     for (var i = 0; i < linksData.length; i++) {
